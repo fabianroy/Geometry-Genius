@@ -15,14 +15,14 @@
     </header>
     <main>
         <!-- Main Content Container -->
-        <div class="flex flex-col md:flex-row">
+        <div class="flex flex-col md:flex-row gap-2">
 
             <!-- Shape Card Container -->
-            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-1">
 
                 <!-- Triangle Card -->
                 <div class="card w-80 bg-base-100 shadow-xl">
-                    <figure><img src="images/triangle.png" class="p-4" /></figure>
+                    <figure><img src="images/triangle.png" class="p-2" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Triangle</h2>
                         <p>Area (A) = 0.5 x b x h</p>
@@ -43,7 +43,7 @@
 
                 <!-- Rectangle Card -->
                 <div class="card w-80 bg-base-100 shadow-xl">
-                    <figure><img src="images/rectangle.png" class="p-4" /></figure>
+                    <figure><img src="images/rectangle.png" class="p-2" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Rectangle</h2>
                         <p>Area (A) = w x l</p>
@@ -62,16 +62,38 @@
                     </div>
                 </div>
 
+                <!-- Pentagon Card -->
+                <div class="card w-80 bg-base-100 shadow-xl">
+                    <figure><img src="images/pentagon.png" class="p-2" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Pentagon</h2>
+                        <p>Area (A) = 0.5 x s x a</p>
+                        <div>
+                            <input class="w-20 p-2" type="text" id="pentagon-side" placeholder="s">
+                            <span class="mr-4 ml-2">cm</span>
+                            <input class="w-20 p-2" type="text" id="pentagon-apothem" placeholder="a">
+                            <span class="ml-2">cm</span>
+                        </div>
+                        <div>
+                            <p>Area : <span id="pentagon-area"></span> cm<sup>2</sup></p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary w-full" onclick="calculatePentagonArea()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Area Calculation Container -->
-            <div class="w-80 border-2 border-gray-700 rounded-md ">
+            <div class="w-72 border-2 border-gray-700 rounded-md">
                 <h3 class="text-3xl text-center p-4">Area Calculation</h3>
             </div>
         </div>
     </main>
     <script src="scripts/triangle.js"></script>
     <script src="scripts/rectangle.js"></script>
+    <script src="scripts/pentagon.js"></script>
 </body>
 
 </html>
